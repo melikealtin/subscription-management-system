@@ -8,6 +8,7 @@ import authRouter from "./routes/auth-router.js";
 import subscriptionRouter from "./routes/subscription-router.js";
 import errorMiddleware from "./middlewares/error-middleware.js";
 import arcjetMiddleware from "./middlewares/arcjet-middleware.js";
+import workflowRouter from "./routes/workflow-router.js";
 
 connectToDatabase();
 
@@ -21,6 +22,7 @@ app.use(arcjetMiddleware);
 app.use("/auth", authRouter);
 app.use("/users", userRouter);
 app.use("/subscriptions", subscriptionRouter);
+app.use("/workflows", workflowRouter);
 
 app.use(errorMiddleware);
 
