@@ -59,6 +59,7 @@ export const createSubscription = async (req, res, next) => {
     next(e);
   }
 };
+
 export const updateSubscription = async (req, res, next) => {
   try {
     const subscription = await Subscription.findById(req.params.id);
